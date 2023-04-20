@@ -8,6 +8,6 @@
  */
 int main(void) 
 {
-	printf("with a proper gammer, but the outcome is a piece of at,\n");
+	printf("with a proper gammer, but the outcome is a piece of art,\n");
 	return (0);
 }
