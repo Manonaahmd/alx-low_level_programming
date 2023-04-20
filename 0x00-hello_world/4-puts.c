@@ -1,11 +1,13 @@
-#include <stdio.h> 
-/**
- * main - A program that prints aline with puts function
- * return: 0 (Success)
- */
+#include <stdio.h>
 
-int  main(void) 
+/**
+ * main -  entry point
+ * Description: prints  "\" programing is like building a multilingual puzzel"
+ * Return : (0)
+ * /
+
+int main(void)
 {
-	puts("\" programming is like building a multilingul puzzle");
-	return (0);
-}
+	puts("\"programming is like building a multilangual puzzel";
+	Return :(0)
+{
