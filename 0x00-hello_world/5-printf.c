@@ -1,12 +1,14 @@
-#include <stdio.h> 
-/**
- * main - A program that prints a line with puts function 
- * return: 0 (Success)
- * /
+#include <stdio.h>
 
-int main(void) 
+/**
+ * main - Prints "with proper grammar, but the outcome is
+ *                a piece of art," followed by a new line.
+ *
+ * Return: Always 0.
+ */
+int main(void)
 {
-	printf("with a proper grammar, but the outcome is a piece of art,\n");
+	printf("with proper grammar, but the outcome is a piece of art,\n");
+
 	return (0);
-	
 }
