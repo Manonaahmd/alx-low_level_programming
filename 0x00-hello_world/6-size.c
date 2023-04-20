@@ -2,8 +2,8 @@
 
 
 /**
- * main - prints the size of various types
- * return: 0 if exited properly, non-zero otherwise
+ * main - Entry point
+ * return:  Always 0 (success) 
  */
 
 int main(void)
