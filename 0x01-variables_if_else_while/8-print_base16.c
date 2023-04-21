@@ -1,23 +1,25 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - entry point
  *
- * Return: Always 0 (Success/correct)
+ * Return: Always 0 (success/correct)
  */
-
 int main(void)
 
 {
-char alphabet;
+char base_16;
 
-for (alphabet = 122 ; alphabet >= 97; alphabet--)
-{
-putchar(alphabet);
+for (base_16 = 48; base_16 <= 57; base_16++)
+{putchar(base_16);
 }
 
-putchar('\n');
+for (base_16 = 97 ; base_16 <= 102; base_16++)
+{
+putchar(base_16);
+}
+
+putchar ('\n');
 
 return (0);
-
 
 }
