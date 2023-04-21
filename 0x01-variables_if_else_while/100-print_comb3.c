@@ -1,41 +1,31 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - Entry point
- *
- * Return: Always 0 (Success/completed)
+ * main - Entyr point
+ * Description: prints two digits combination
+ * Return: Always 0 (success)
  */
 int main(void)
-
 {
-int number_left;
-int number_right;
+	int c, i;
 
+	for (c = '0'; c <= '9'; c++)
+	{
+		for (i = '0'; i <= '9'; i++)
+		{
+			if (c < i)
+			{
+				putchar(c);
+				putchar(i);
 
-for (number_left = 48; number_right <= 78; number_left++)
-{
-for (number_right = number_left + 1 ; number_right <= 78; number_right++)
-{
-
-putchar(number_left);
-putchar (number_right);
-
-
-if ((number_left == 56) && (number_right == 78))
-{
-break;
-}
-
-putchar(',');
-putchar (' ');
-
-}
-
-}
-
-putchar('\n');
-
-
-return (0);
-
-
+				if (c != '8' || (c == '8' && i != '9'))
+				{
+					putchar(',');
+					putchar(' ');
+				}
+			}
+		}
+	}
+	putchar('\n');
+	return (0);
 }
