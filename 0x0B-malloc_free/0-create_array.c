@@ -2,26 +2,54 @@
 #include <stdlib.h>
 
 /**
- * create_array - create an array of chars, and initialize with specific char
- * @size: size of array
- * @c: specific char
- * Return: char pointer to malloc created memory address or NULL if error
+ * *create_array - creates an array of chars, and initializes
+ *  it with a specific char.
+ *  @c: char to initialize
+ *  @size: number of bytes to allocate
+ *
+ *  Return: a pointer to the array or null if it fails
  */
-
 char *create_array(unsigned int size, char c)
 {
-	char *a;
-	unsigned int i;
+	char *array = malloc(size);
 
-	if (size == 0)
+	if (size == 0 || array == 0)
+		return (NULL);
+	while (size--)
+		array[size] = c;
+	return (array);
+}
+
+vi 1-strdup.c
+#include <stdlib.h>
+#include "holberton.h"
+
+/**
+ * *_strdup - copies the string given as parameter
+ * @str: string to duplicate
+ *
+ * Return: pointer to the copied string (Success), NULL (Error)
+ */
+char *_strdup(char *str)
+{
+	char *duplicate;
+	unsigned int i, len;
+
+	i = 0;
+	len = 0;
+
+	if (str == NULL)
 		return (NULL);
 
-	a = malloc(size * sizeof(*a));
-	if (a == NULL)
+	while (str[len])
+		len++;
+	duplicate = malloc(sizeof(char) * (len + 1));
+
+	if (duplicate == NULL)
 		return (NULL);
 
-	for (i = 0; i < size; i++)
-		a[i] = c;
+	while ((duplicate[i] = str[i]) != '\0')
+		i++;
 
-	return (a);
+	return (duplicate);
 }
